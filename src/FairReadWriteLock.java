@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Implementation of a fair read and write monitor
  *
- * @author Faniel ghirmay ffg92 and jose garcia jag7235
+ * @author Faniel ghirmay  and jose garcia
  *
  */
 public class FairReadWriteLock {
