@@ -33,8 +33,6 @@ public class CyclicBarrier {
 			mutex.release();
 		}
 		sync.acquire();
-		sync.release();
-		exitMutex.acquire();
 		if (numOfThreadsOut == permits - 1) {
 			numOfThreadsOut = 0;
 			numOfThreads = permits;
@@ -42,7 +40,7 @@ public class CyclicBarrier {
 		} else {
 			numOfThreadsOut++;
 		}
-		exitMutex.release();
+		sync.release();
 		return id;
 	}
 	public static void main(String args[]) throws InterruptedException {
