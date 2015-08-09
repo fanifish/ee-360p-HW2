@@ -10,14 +10,12 @@ public class CyclicBarrier {
 	int numOfThreadsOut;
 	Semaphore mutex;
 	Semaphore sync;
-	Semaphore exitMutex;
 
 	CyclicBarrier(int permits) {
 		numOfThreads = permits;
 		this.permits = permits;
 		numOfThreadsOut = 0;
 		mutex = new Semaphore(1, true);
-		exitMutex = new Semaphore(1, true);
 	}
 
 	int await() throws InterruptedException {
